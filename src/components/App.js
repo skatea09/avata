@@ -1,26 +1,32 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import List from './List';
+import fetchData from '../redux/actions';
+
+const propTypes = {
+  fetchData: PropTypes.func.isRequired,
+};
 
 class App extends Component {
+  componentDidMount() {
+    const { fetchData } = this.props;
+    fetchData();
+  }
   render() {
     return (
       <div className="App">
-        {console.log('here tho')}
-        <header className="App-header">
-          <p className="text-red">
-            Edit <code>src/App.js</code> and save to reload.
+        <header className="py-4">
+          <p className="font-bold text-5xl text-center">
+            The Book
           </p>
-          <a
-            className="App-link text-red"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+          <List />
         </header>
       </div>
     );
   }
 }
 
-export default App;
+App.propTypes = propTypes;
+
+export default connect(null, { fetchData })(App);
