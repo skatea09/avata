@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import List from './List';
-import fetchData from '../redux/actions';
+import MainView from './MainView';
+import { fetchData } from '../redux/actions';
 
 const propTypes = {
   fetchData: PropTypes.func.isRequired,
@@ -10,18 +10,17 @@ const propTypes = {
 
 class App extends Component {
   componentDidMount() {
-    const { fetchData } = this.props;
-    fetchData();
+    this.props.fetchData();
   }
   render() {
     return (
       <div className="App">
-        <header className="py-4">
+        <header className="pt-4 pb-1">
           <p className="font-bold text-5xl text-center">
             The Book
           </p>
-          <List />
         </header>
+        <MainView />
       </div>
     );
   }
