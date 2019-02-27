@@ -31,11 +31,11 @@ class MainView extends Component {
             value={filter}
             placeholder="Select an option"
             menuClassName="absolute bg-white pin-l bg-grey-lightest"
-            className="border px-2 pt-1 bg-grey-light relative"
+            className="border px-2 pt-1 bg-grey-light relative pt-2"
           />
           <input
             type="text"
-            className="border border-l-0 w-3/5 pl-2 py-1 md:py-2"
+            className="border border-l-0 w-3/5 pl-2 py-2"
             style={{ maxWidth: '600px' }}
             placeholder="Search"
             value={this.state.inputValue}

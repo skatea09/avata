@@ -6,20 +6,17 @@ const propTypes = {
   filteredAvgScore: PropTypes.number.isRequired,
   filteredLength: PropTypes.number.isRequired,
   totalLength: PropTypes.number.isRequired,
-  avgScore: PropTypes.number.isRequired,
-  filteredResults: PropTypes.array.isRequired
+  avgScore: PropTypes.number.isRequired
 };
 
 const Charts = ({
   filteredAvgScore,
   avgScore,
-  filteredResults,
   totalLength,
   filteredLength
 }) => {
-  console.log();
   return (
-    <div className="flex-col">
+    <div className="">
       <PieChart
         labels
         data={[

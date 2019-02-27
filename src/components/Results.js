@@ -24,7 +24,7 @@ class List extends Component {
       Math.round(meanBy(filteredResults, result => result.review_score)) || 0;
     return (
       <div className="flex-col w-full md:flex-row">
-        <div className="border-t mt-4 w-4/5 mx-auto">
+        <div className="border-t mt-8 w-4/5 mx-auto">
           {filteredResults.map(result => {
             return <Item result={result} key={result.title} />;
           })}
