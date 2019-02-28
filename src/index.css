@@ -6303,11 +6303,6 @@ table {
   padding: 8px 10px;
 }
 
-.pie-chart-label {
-  padding-left: 8px;
-  padding-right: 8px;
-}
-
 @media (min-width: 576px) {
   .sm\:list-reset {
     list-style: none;
