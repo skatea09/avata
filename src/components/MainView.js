@@ -10,7 +10,7 @@ class MainView extends Component {
     { value: "title", label: "Title" }
   ];
 
-  state = { filter: this.options[3].value, inputValue: "" };
+  state = { filter: this.options[0].value, inputValue: "" };
 
   onSelect = selected => {
     this.setState({ filter: selected.value });
@@ -31,18 +31,18 @@ class MainView extends Component {
             value={filter}
             placeholder="Select an option"
             menuClassName="absolute bg-white pin-l bg-grey-lightest"
-            className="border px-2 pt-1 bg-grey-light relative pt-2"
+            className="border-0"
           />
           <input
             type="text"
-            className="border border-l-0 w-3/5 pl-2 py-2"
-            style={{ maxWidth: '600px' }}
+            className="border border-l-0 w-3/5 pl-2 py-2 outline-none"
+            style={{ maxWidth: '800px' }}
             placeholder="Search"
             value={this.state.inputValue}
             onChange={this.handleInputChange}
           />
         </div>
-        <Results filter={filter} inputValue={inputValue} />
+        <Results filter={filter} inputValue={inputValue} options={this.options} />
       </div>
     );
   }

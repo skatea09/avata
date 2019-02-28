@@ -16,9 +16,10 @@ const Charts = ({
   filteredLength
 }) => {
   return (
-    <div className="">
+    <div className="mt-8 items-center flex flex-col">
       <PieChart
         labels
+        size={300}
         data={[
           { key: "Total Books", value: totalLength, color: "#aaac84" },
           { key: "Selected Books", value: filteredLength, color: "#dce7c5" }

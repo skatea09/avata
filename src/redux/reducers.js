@@ -7,6 +7,8 @@ const initialState = {
   filter: '',
 };
 
+const max = 100;
+
 const filterByScore = (data) => {
   let topResults = data
   .filter(result => result.review_score > 75)
@@ -19,7 +21,7 @@ const filterByScore = (data) => {
     }
     return 0;
   });
-  if (topResults.length > 100) topResults = topResults.slice(0, 100);
+  if (topResults.length > max) topResults = topResults.slice(0, max);
   return topResults;
 }
 
