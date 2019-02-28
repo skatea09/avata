@@ -19,7 +19,7 @@ const Charts = ({
     <div className="mt-8 items-center flex flex-col">
       <PieChart
         labels
-        size={300}
+        size={400}
         data={[
           { key: "Total Books", value: totalLength, color: "#aaac84" },
           { key: "Selected Books", value: filteredLength, color: "#dce7c5" }
@@ -27,7 +27,7 @@ const Charts = ({
         styles={{
           ".chart_text": {
             fontSize: "1em",
-            padding: "8px",
+            marginLeft: "8px",
             fill: "#fff"
           }
         }}
